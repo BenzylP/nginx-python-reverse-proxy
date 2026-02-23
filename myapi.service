@@ -1,0 +1,12 @@
+[Unit]
+Description=My Python API Background Service
+After=network.target
+
+[Service]
+User=sephira111
+WorkingDirectory=/home/sephira111/my-api
+ExecStart=/usr/bin/python3 /home/sephira111/my-api/server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
